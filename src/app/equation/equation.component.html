@@ -1,18 +1,8 @@
 <form [formGroup]="mathForm">
   <!-- instead of referencing mathForm.value.a use getter on the class -->
-  {{ a }} + {{ b }} =
+  <div class="equation">{{ a }} + {{ b }} =</div>
   <input formControlName="answer" />
 </form>
-<br />
-<br />
-Seconds Per Solution: {{ secondsPerSolution | number : "1.1-3" }}
-<br />
-<br />
-<br />
-<hr />
-<h2>Debugging output:</h2>
-<div>
-  Form is Valid: <b>{{ mathForm.valid }}</b>
+<div class="stats">
+  {{ secondsPerSolution | number : "1.1-3" }}
 </div>
-<div>Form Values: {{ mathForm.value | json }}</div>
-<div>Form Errors: {{ mathForm.errors | json }}</div>
