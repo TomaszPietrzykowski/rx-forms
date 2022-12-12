@@ -1,7 +1,7 @@
 <form [formGroup]="mathForm">
   <!-- instead of referencing mathForm.value.a use getter on the class -->
   <div class="equation">{{ a }} + {{ b }} =</div>
-  <input formControlName="answer" autofocus />
+  <input appAnswerHighlight formControlName="answer" autofocus />
 </form>
 <div class="stats">
   {{ secondsPerSolution | number : "1.1-3" }}
